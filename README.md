@@ -10,6 +10,6 @@ Three traditional machine learning models (logistic regression / random forest /
 *Scaffold split ; Nested Cross-Validation (inner CV: hyperparameter tuning , model selection / outer split: evaluation)  
 *performance measures: PR-AUC, ROC-AUC, Precision, recall, Recall@precition>0.8  
 
-# References  
+### References  
 Tox21 challenge: https://tripod.nih.gov/tox21/challenge/data.jsp#
 OpenAI. 2026. GPT-5, ChatGPT model. OpenAI, San Francisco, CA. Available at: ChatGPT (accessed on March 2026).
