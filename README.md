@@ -8,7 +8,7 @@ Three traditional machine learning models (logistic regression / random forest /
 - [Deep Learning](https://nbviewer.org/github/jungeun1228/2026_02_Tox21_ML_DL/blob/main/2026_Tox21_DL.ipynb)
 
 
-## Details of model structure
+### Details of model structure
 **models:**   
 -ML: multi-task binary classification (logistic regression / random forest / lightGBM)  
 -DL: multi-task learning  
