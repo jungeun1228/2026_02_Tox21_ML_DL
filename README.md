@@ -4,8 +4,8 @@ Three traditional machine learning models (logistic regression / random forest /
 
 ### Rendered Notebooks
 > If GitHub notebook preview fails, please use the NBViewer links below.
-- [Traditional ML](https://nbviewer.org/github/jungeun1228/2026_02_Tox21_ML_DL/blob/main/2026_Tox21_Traditional_ML.ipynb)
-- [Deep Learning](https://nbviewer.org/github/jungeun1228/2026_02_Tox21_ML_DL/blob/main/2026_Tox21_DL.ipynb)
+- [Tox21_Traditional ML](https://nbviewer.org/github/jungeun1228/2026_02_Tox21_ML_DL/blob/main/2026_Tox21_Traditional_ML.ipynb)
+- [Tox21_DL](https://nbviewer.org/github/jungeun1228/2026_02_Tox21_ML_DL/blob/main/2026_Tox21_DL.ipynb)
 
 
 ### Details of model structure
