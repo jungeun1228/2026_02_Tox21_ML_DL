@@ -2,13 +2,13 @@
 
 Three traditional machine learning models (logistic regression / random forest / lightGBM) and a neural network model were compared for their performance to predict bioassay activity based on Tox21 dataset. 
 
-## Rendered Notebooks
+### Rendered Notebooks
 > If GitHub notebook preview fails, please use the NBViewer links below.
 - [Traditional ML](https://nbviewer.org/github/jungeun1228/2026_02_Tox21_ML_DL/blob/main/2026_Tox21_Traditional_ML.ipynb)
 - [Deep Learning](https://nbviewer.org/github/jungeun1228/2026_02_Tox21_ML_DL/blob/main/2026_Tox21_DL.ipynb)
 
 
-### Details of model structure
+## Details of model structure
 **models:**   
 -ML: multi-task binary classification (logistic regression / random forest / lightGBM)  
 -DL: multi-task learning  
