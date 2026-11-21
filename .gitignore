@@ -1,0 +1,20 @@
+# Python
+__pycache__/
+*.pyc
+*.egg-info/
+
+# Virtual environments
+.venv/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Tox21 raw data
+data/raw/
+
+# Training results and checkpoints
+results/*
+!results/.gitkeep
+
+# Local VS Code settings
+.vscode/
