@@ -1,5 +1,7 @@
 # 2026_02_Tox21_ML_DL
 
+ * update ongoing: refactor branch - modularization, automation of optimization process, etc.
+
 Three traditional machine learning models (logistic regression / random forest / lightGBM) and a neural network model were compared for their performance to predict bioassay activity based on Tox21 dataset. 
 
 ### Rendered Notebooks
