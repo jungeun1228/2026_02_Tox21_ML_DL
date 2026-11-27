@@ -1,7 +1,7 @@
 """Baseline multi-endpoint model experiments for the Tox21 project.
 
-These functions retain the original notebook's random/scaffold split,
-model fitting, scoring, and return signatures. Pass the seed explicitly from
+These functions retain the original notebook's random split, model fitting,
+scoring, and return signatures, and use a molecule-count-based greedy scaffold split. Pass the seed explicitly from
 the notebook (e.g. ``random_state=SEED``). The caller should pass data from
 the outer **training** partition, not the reserved hold-out test set.
 """
@@ -12,7 +12,9 @@ from rdkit import Chem
 from rdkit.Chem.Scaffolds import MurckoScaffold
 from sklearn.base import clone
 from sklearn.metrics import average_precision_score, roc_auc_score
-from sklearn.model_selection import GroupShuffleSplit, train_test_split
+from sklearn.model_selection import train_test_split
+
+from .splitting import greedy_scaffold_indices
 
 
 def run_multitarget_random_split(
@@ -88,7 +90,7 @@ def make_scaffold(smiles):
 def run_multitarget_scaffold_split(
     valid_df, X_all, target_cols, base_model, *, random_state
 ):
-    """Run one shared scaffold-group 80/20 split across all endpoints.
+    """Run one shared scaffold-group split targeting 80/20 by molecule count.
 
     Results and prediction columns follow the notebook's original format.
     The split is made only within the supplied dataset; use ``train_df``
@@ -107,11 +109,10 @@ def run_multitarget_scaffold_split(
     valid_df = valid_df.copy()
     valid_df["scaffold"] = valid_df["canonical_smiles"].apply(make_scaffold)
 
-    gss = GroupShuffleSplit(
-        n_splits=1, test_size=0.2, random_state=random_state
-    )
-    global_train_idx, global_test_idx = next(
-        gss.split(valid_df, groups=valid_df["scaffold"])
+    global_train_idx, global_test_idx = greedy_scaffold_indices(
+        valid_df["scaffold"],
+        test_size=0.2,
+        random_state=random_state,
     )
 
     global_train_index = valid_df.index[global_train_idx]
